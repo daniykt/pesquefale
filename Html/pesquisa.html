@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar-Lucas</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="/css/pesquisar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo"><img src="../imagens/logo.png" alt="Nome do Site"></h2>
+        <nav class="navigation">
+            <a href="home.html">
+                <span class="material-symbols-outlined">home</span>
+                Página Inicial
+            </a>
+            <a href="pesquisa.html" class="active">
+                <span class="material-symbols-outlined">search</span>
+                Pesquisa
+            </a>
+            <a href="locaisavaliados.html">
+                <span class="material-symbols-outlined">location_on</span>
+                Melhores locais
+            </a>
+            <a href="notificacao.html">
+                <span class="material-symbols-outlined">notifications</span>
+                Notificações
+            </a>
+            <a href="perfil.html">
+                <span class="material-symbols-outlined">person</span>
+                Perfil
+            </a>
+            <div class="theme-toggle">
+              <button id="theme-btn" class="theme-btn">
+                  <span class="material-symbols-outlined">dark_mode</span>
+              </button>
+          </div>
+        </nav>
+        <a href="login.html" class="login-btn">
+            <span class="material-symbols-outlined">login</span>
+            Entra/Cadastro
+        </a>
+    </header>
+    <div class="container">
+        <main>
+            <section class="search-container">
+                <h2>PESQUISAR LOCAIS DE PESCA</h2>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Digite o nome de um local, cidade ou tipo de peixe...">
+                    <button id="search-button"><i class="fas fa-search"></i> Pesquisar</button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="fish-type">Tipo de Peixe</label>
+                        <select id="fish-type">
+                            <option value="">Todos</option>
+                            <option value="tucunaré">Tucunaré</option>
+                            <option value="dourado">Dourado</option>
+                            <option value="pintado">Pintado</option>
+                            <option value="pacu">Pacu</option>
+                            <option value="corvina">Corvina</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="location-type">Tipo de Local</label>
+                        <select id="location-type">
+                            <option value="">Todos</option>
+                            <option value="rio">Rio</option>
+                            <option value="lago">Lago</option>
+                            <option value="represa">Represa</option>
+                            <option value="pesqueiro">Pesqueiro</option>
+                            <option value="mar">Mar</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="rating">Avaliação Mínima</label>
+                        <select id="rating">
+                            <option value="0">Qualquer</option>
+                            <option value="3">3+ estrelas</option>
+                            <option value="4">4+ estrelas</option>
+                            <option value="4.5">4.5+ estrelas</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="results-container" id="results-container">
+                    <!-- Os resultados serão inseridos aqui via JavaScript -->
+                </div>
+                
+                <div id="no-results" class="no-results hidden">
+                    <i class="fas fa-fish" style="font-size: 2em; margin-bottom: 15px;"></i>
+                    <p>Nenhum local de pesca encontrado. Tente com outros termos de pesquisa.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+      <!-- Rodapé -->
+  <footer class="site-footer">
+    <p>© 2025 Pesque & Fale – Todos os direitos reservados</p>
+  </footer>
+    <script src="../Javascript/script.js"></script>
+    <script src="../Javascript/pesquisa.js"></script>
+</body>
+</html>

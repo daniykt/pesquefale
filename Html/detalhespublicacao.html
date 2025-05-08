@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Detalhes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/detalhespublicacao.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo"><img src="../imagens/logo.png" alt="Nome do Site"></h2>
+        <nav class="navigation">
+            <a href="home.html" class="active">
+                <span class="material-symbols-outlined">home</span>
+                Página Inicial
+            </a>
+            <a href="pesquisa.html">
+                <span class="material-symbols-outlined">search</span>
+                Pesquisa
+            </a>
+            <a href="locaisavaliados.html">
+                <span class="material-symbols-outlined">location_on</span>
+                Melhores locais
+            </a>
+            <a href="notificacao.html">
+                <span class="material-symbols-outlined">notifications</span>
+                Notificações
+            </a>
+            <a href="perfil.html">
+                <span class="material-symbols-outlined">person</span>
+                Perfil
+            </a>
+            <div class="theme-toggle">
+                <button id="theme-btn" class="theme-btn">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+
+          <div class="back-button">
+            <button onclick="history.back()">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Voltar
+            </button>
+        </div>
+        
+            <div class="post-card">
+                <!-- Imagem da publicação -->
+                <div class="post-image">
+                    <img src="https://pbs.twimg.com/media/CxEcXvsW8AA5OTJ.jpg" alt="Imagem da publicação">
+                </div>
+
+                <!-- Conteúdo da publicação -->
+                <div class="post-content">
+                    <h3 class="post-author">@lula <span class="post-date">• 06/05/2025 às 10:45</span></h3>
+                    <p class="post-location">Brasília - São Paulo</p>
+                    <p class="post-text">Meu cumpanheiro pescou hoje!</p>
+                </div>
+
+                <!-- Ações -->
+                <div class="post-actions">
+                    <button><span class="material-symbols-outlined">thumb_up</span> Curtir</button>
+                    <button><span class="material-symbols-outlined">comment</span> Comentar</button>
+                    <button><span class="material-symbols-outlined">share</span> Compartilhar</button>
+                </div>
+
+                <!-- Comentários -->
+                <div class="post-comments">
+                    <h4 class="comments-title">Comentários</h4>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">@carlo.</span>
+                            <span class="comment-time">08:12 - 06/05/2025</span>
+                        </div>
+                        <div class="comment-content">Que peixe incrível! Parabéns pela captura!</div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">@ana_32</span>
+                            <span class="comment-time">09:34 - 06/05/2025</span>
+                        </div>
+                        <div class="comment-content">Ubatuba realmente tem ótimos locais para pesca!</div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">@marcos_ribeiro</span>
+                            <span class="comment-time">10:01 - 06/05/2025</span>
+                        </div>
+                        <div class="comment-content">Qual foi a isca utilizada?</div>
+                    </div>
+                </div>
+
+                <!-- Caixa de novo comentário -->
+                <div class="fake-comment-box">
+                    <input type="text" class="fake-comment-input" placeholder="Escreva um comentário...">
+                    <button class="fake-comment-submit">Comentar</button>
+                </div>
+            </div>
+
+        </div> <!-- Fim de .main-content -->
+    </div> <!-- Fim de .container -->
+
+    <footer class="site-footer">
+        <p>© 2025 Pesque & Fale – Todos os direitos reservados</p>
+    </footer>
+
+    <script src="../Javascript/script.js"></script>
+</body>
+</html>

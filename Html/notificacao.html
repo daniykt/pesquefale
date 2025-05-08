@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notificações</title>
+ <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/notificacao.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h2 class="logo"><img src="../imagens/logo.png" alt="Nome do Site"></h2>
+    <nav class="navigation">
+        <a href="home.html">
+            <span class="material-symbols-outlined">home</span>
+            Página Inicial
+        </a>
+        <a href="pesquisa.html">
+            <span class="material-symbols-outlined">search</span>
+            Pesquisa
+        </a>
+        <a href="locaisavaliados.html">
+          <span class="material-symbols-outlined">location_on</span>
+          Melhores locais
+        </a>
+        <a href="notificacao.html" class="active">
+            <span class="material-symbols-outlined">notifications</span>
+            Notificações
+        </a>
+        <a href="perfil.html">
+            <span class="material-symbols-outlined">person</span>
+            Perfil
+        </a>
+        <div class="theme-toggle">
+          <button id="theme-btn" class="theme-btn">
+              <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+      </div>
+    </nav>
+    <a href="login.html" class="login-btn">
+        <span class="material-symbols-outlined">login</span>
+        Entra/Cadastro
+    </a>
+</header>
+
+  <!-- Exemplo para uma notificação -->
+   <div class="container">
+   <div class="container-notificacoes">
+<div class="notificacao" data-id="1">
+  <div class="meta">
+    <span class="data">07/05/2025 10:35</span>
+    <button class="close" onclick="excluir(this)">&times;</button>
+  </div>
+  <p class="comentario"><strong>Pessoa 1:</strong> Lugarzinho da hora pra pescar, viu? Vou aproveitar mais vezes com certeza!</p>
+  <div class="botoes">
+    <button onclick="marcarComoLida(this)"><i class="fas fa-check"></i> Lida</button>
+    <button class="like-btn" onclick="toggleReaction(this, 'like')"><i class="far fa-thumbs-up"></i> Curtir</button>
+    <button class="dislike-btn" onclick="toggleReaction(this, 'dislike')"><i class="far fa-thumbs-down"></i> Não Curtir</button>
+    <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-star"></i> Favorito</button>
+  </div>
+</div>
+
+<div class="notificacao" data-id="2">
+  <div class="meta">
+    <span class="data">07/05/2025 12:00</span>
+    <button class="close" onclick="excluir(this)">&times;</button>
+  </div>
+  <p class="comentario"><strong>Pessoa 2:</strong> Você pode me informar se aí é permitido usar molinete profissional para pescar lambari?</p>
+  <div class="botoes">
+    <button onclick="marcarComoLida(this)"><i class="fas fa-check"></i> Lida</button>
+    <button class="like-btn" onclick="toggleReaction(this, 'like')"><i class="far fa-thumbs-up"></i> Curtir</button>
+    <button class="dislike-btn" onclick="toggleReaction(this, 'dislike')"><i class="far fa-thumbs-down"></i> Não Curtir</button>
+    <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-star"></i> Favorito</button>
+  </div>
+</div>
+
+<div class="notificacao" data-id="3">
+  <div class="meta">
+    <span class="data">07/05/2025 15:30</span>
+    <button class="close" onclick="excluir(this)">&times;</button>
+  </div>
+  <p class="comentario"><strong>Você tem novos seguidores:</strong> Pedro e João começaram a seguir você</p>
+  <div class="botoes">
+    <button onclick="marcarComoLida(this)"><i class="fas fa-check"></i> Lida</button>
+    <button class="like-btn" onclick="toggleReaction(this, 'like')"><i class="far fa-thumbs-up"></i> Curtir</button>
+    <button class="dislike-btn" onclick="toggleReaction(this, 'dislike')"><i class="far fa-thumbs-down"></i> Não Curtir</button>
+    <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-star"></i> Favorito</button>
+  </div>
+</div>
+
+<div class="notificacao" data-id="4">
+  <div class="meta">
+    <span class="data">07/05/2025 20:30</span>
+    <button class="close" onclick="excluir(this)">&times;</button>
+  </div>
+  <p class="comentario"><strong>Testes:</strong> Maria e Lucas curtiram seu post</p>
+  <div class="botoes">
+    <button onclick="marcarComoLida(this)"><i class="fas fa-check"></i> Lida</button>
+    <button class="like-btn" onclick="toggleReaction(this, 'like')"><i class="far fa-thumbs-up"></i> Curtir</button>
+    <button class="dislike-btn" onclick="toggleReaction(this, 'dislike')"><i class="far fa-thumbs-down"></i> Não Curtir</button>
+    <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-star"></i> Favorito</button>
+  </div>
+</div>
+   </div>
+   </div>
+  <script src="../Javascript/script.js"></script>
+    <!-- Rodapé -->
+    <footer class="site-footer">
+      <p>© 2025 Pesque & Fale – Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

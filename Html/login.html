@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Cadastro</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body class="login-page">
+    <div class="wrapper">
+        <a href="home.html"><span class="material-symbols-outlined back">
+            arrow_back
+            </span>
+        </a>
+        <div class="form-box login">
+            <h2>ENTRA</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="material-symbols-outlined icon">
+                        alternate_email
+                        </span>
+                    <input type="email" required placeholder="">
+                    <label placeholder="Digite o Email">Email</label>
+                    <span class="input-hint">exemplo@gmail.com</span>
+                </div>
+                <div class="input-box">
+                    <span class="material-symbols-outlined icon">
+                        password
+                        </span>
+                    <input type="password" required placeholder="">
+                    <label>senha</label>
+                    <span class="input-hint">Entre 6 a 10 caracteres pelo menos</span>
+                    <span class="material-symbols-outlined toggle-password">visibility</span>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Lembre-se de mim</label>
+                    <a href="#">Esqueceu sua senha?</a>
+                </div>
+                <button type="submit" class="btn">Entra</button>
+                <div class="login-register">
+                    <p>Não tem conta aqui?<a href="#" class="register-link">Cadastre-se aqui</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>CADASTRO</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="material-symbols-outlined icon">
+                        person
+                        </span>
+                        <input type="text" required placeholder="">
+                    <label>Usuário</label>
+                    <span class="input-hint">Sem espaços ou caracteres especiais</span>
+                </div>
+                <div class="input-box">
+                    <span class="material-symbols-outlined icon">
+                        alternate_email
+                        </span>
+                        <input type="email" required placeholder="">
+                    <label>Email</label>
+                    <span class="input-hint">exemplo@gmail.com</span>
+                </div>
+                <div class="input-box">
+                    <span class="material-symbols-outlined icon">
+                        password
+                        </span>
+                        <input type="password" required placeholder=" ">
+                    <label>senha</label>
+                    <span class="input-hint">Entre 6 a 10 caracteres</span>
+                    <span class="material-symbols-outlined toggle-password">visibility</span>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Eu aceito os termos & condições.</label>
+                </div>
+                <button type="submit" class="btn">Cadastrar-se</button>
+                <div class="login-register">
+                    <p>Já tem conta aqui?<a href="#" class="login-link">Entra</a></p>
+                </div>
+            </form>
+    </div>
+    <script src="../Javascript/login.js"></script>
+</body>
+</html>

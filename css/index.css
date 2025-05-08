@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Anton+SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #062A6C;
+    min-height: 100vh;
+    /* Removi o overflow: hidden para permitir rolagem quando necessário */
+}
+
+header {
+    background-color: #062A6C;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 5%; /* Usando porcentagem para padding responsivo */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    z-index: 100;
+    gap: 20px; /* Espaço entre os elementos do grid */
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+    transition: 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Aumentei o espaçamento entre os itens */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px; /* Aumentei o padding para tornar maior */
+    border-radius: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Aumentei o espaço entre ícone e texto */
+    font-size: 1.1rem; /* Aumentei o tamanho da fonte */
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    padding: 12px 25px; /* Aumentei o tamanho do botão */
+    background: white;
+    color: #062A6C;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem; /* Aumentei o tamanho da fonte */
+}
+
+/* Estilos para ícones */
+.material-symbols-outlined {
+    font-size: 1.5rem !important; /* Aumentei o tamanho dos ícones */
+}
+
+/* Efeitos hover */
+.navigation a:hover, 
+.navigation a.active {
+    background: white;
+    color: #062A6C;
+    transform: scale(1.05);
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+    .navigation {
+        gap: 15px;
+    }
+    .navigation a {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+    }
+    .navigation {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    .login-btn {
+        grid-row: 1;
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 3%;
+    }
+    .logo img {
+        height: 90px;
+    }
+    .navigation a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    .login-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navigation {
+        gap: 10px;
+    }
+    .navigation a {
+        flex-direction: column;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+    .material-symbols-outlined {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Botão de tema */
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* Overlay com blur */
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .overlay.hidden {
+    display: none;
+  }
+  
+  /* Card expandido */
+  .notificacao-expandida {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .fechar-expandida {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Adicione ao seu CSS existente */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.notification-icon {
+    position: relative;
+}
+
+/* Melhorando a animação */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.new-notification {
+    animation: pulse 1.5s infinite;
+}
+
+/* Rodapé Global */
+.site-footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    word-break: break-word;
+}
+
+/* Layout base para manter o rodapé no fim da página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    flex: 1;
+}
+
+
+  

@@ -1,0 +1,79 @@
+body { 
+    font-family: Arial, sans-serif;
+    background-color: #062A6C;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  h1 {
+    background-color: #062A6C;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 30px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 20px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .card h2 {
+    margin: 10px 0 5px 0;
+  }
+  
+  .stars {
+    color: gold;
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .card p {
+    margin: 5px 0;
+  }
+
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* ======== DARK MODE ========= */
+
+body.dark-mode .card {
+  background-color: #000000;
+  color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .stars {
+  color: #ffd700; /* continua dourado */
+}
+
+  /*para o body e h1 coloquei esse tom de azul pois foi o tom escolhido pelo grupo e oq achamos melhor*/
+  /*para o card coloquei branco para destacá-lo*/
+  /*para a fonte coloquei arial pois acho mais vísivel e branco para ser mais acessível*/
+  /*cor gold para as estrelas também foi escolhido pelo grupo*/
+  /*Todas as outras definições foram reajustes para o card e a foto do local de pesca ficar bem vísivel.*/
+  /*Assim como margem, largura, tamanho da fonte e alinhamento dos textos onde coloquei no centro para maior visibilidade*/
+  

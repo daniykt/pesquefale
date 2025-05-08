@@ -1,0 +1,500 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Variáveis rápidas */
+  :root {
+    --white: #fff;
+    --gray: #ccc;
+    --dark-gray: #555;
+    --primary: #0096c7;
+    --primary-dark: #0077b6;
+  }
+  
+  /* Layout principal */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px; /* Coluna de posts mais larga, eventos fixo */
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: start; /* Alinha os itens no topo */
+  }
+  
+  /* Corpo */
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Containers */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+  
+  /* Header */
+  .site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray);
+  }
+  
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  
+  /* Botão Nova Publicação */
+  /* Container do botão */
+  /* Container do botão Nova Publicação */
+  .btn-container {
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center; /* Centraliza verticalmente */
+      width: 100%; /* Garante que o contêiner ocupe toda a largura */
+      margin-bottom: 20px; /* Espaço abaixo do contêiner */
+      text-align: center; /* Garante que o conteúdo dentro do contêiner seja centralizado */
+  }
+  
+  /* Botão Nova Publicação */
+  .btn-new-post {
+      background: var(--white);
+      border: 2px solid var(--primary);
+      padding: 10px 20px; /* Ajuste o padding */
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 1rem; /* Espaço entre a imagem e o campo de texto */
+      cursor: pointer;
+      transition: 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px; /* Limita a largura do botão */
+      width: 100%; /* Faz o botão ocupar 100% da largura do contêiner */
+      margin: 0 auto; /* Centraliza o botão dentro do contêiner */
+  }
+  
+    
+    /* Efeito de hover */
+    .btn-new-post:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+    }
+    
+    .btn-text {
+      flex: 1;
+    }
+  
+    /* Imagem de perfil */
+    .profile-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    /* Campo de texto dentro do botão */
+    .btn-new-post input {
+      border: none;
+      background: transparent;
+      font-size: 1rem;
+      flex: 1; /* O campo de texto ocupa o restante do espaço disponível */
+      color: #333;
+      padding: 5px 10px; /* Adiciona um pequeno padding para tornar o campo mais confortável */
+    }
+    
+    /* Foco no campo de texto */
+    .btn-new-post input:focus {
+      outline: none;
+      color: var(--primary);
+    }
+    
+  
+  
+  /* Layout principal */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Feed */
+  .feed {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .post-card {
+    background: var(--white);
+    border-radius: 16px; /* Borda arredondada */
+    box-shadow: 0 8px 16px rgba(0,0,0,.1); /* Sombra suave */
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #eee; /* Borda do card */
+    padding: 1rem; /* Espaçamento interno */
+  }
+  
+  .post-card:hover {
+    transform: translateY(-4px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1); /* Sombra mais intensa */
+  }
+  
+
+  
+  /* Conteúdo da publicação */
+  .post-content {
+    padding: 1.5rem 0;
+  }
+  
+  .post-author {
+    margin-bottom: .5rem;
+    color: var(--primary);
+    font-weight: bold;
+  }
+  
+  .post-location {
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+    font-size: .9rem;
+  }
+  
+  .post-text {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Ações da publicação (Curtir, Comentar, Compartilhar) */
+  .post-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: .75rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .post-actions button {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    cursor: pointer;
+    transition: color .2s, transform .2s;
+  }
+  
+  .post-actions button:hover {
+    color: var(--primary-dark);
+    transform: scale(1.1); /* Efeito de aumentar ao passar o mouse */
+  }
+  
+  /* Comentário da publicação */
+  .post-comment {
+    padding: 1rem 1.5rem;
+    font-size: .9rem;
+    color: var(--dark-gray);
+    border-top: 1px solid #eee;
+  }
+  
+/* Corrigindo a exibição da imagem da publicação */
+.post-image {
+    width: 100%;
+    height: auto; /* Ajusta a altura da imagem proporcionalmente à largura */
+    display: block; /* Remove qualquer possível espaçamento abaixo da imagem */
+  }
+  
+  .post-image img {
+    width: 100%; /* A imagem ocupará 100% da largura disponível */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    object-fit: cover; /* A imagem ainda vai cobrir o espaço sem distorcer, mas com corte se necessário */
+    display: block; /* Isso remove qualquer margem ou padding extra ao redor da imagem */
+  }
+  
+  
+  .post-content {
+    padding: 1.5rem;
+  }
+  
+  .post-author {
+    margin-bottom: .5rem;
+    color: var(--primary);
+  }
+  
+  .post-location {
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+    font-size: .9rem;
+  }
+  
+  .post-text {
+    margin-bottom: 1rem;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: .75rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .post-actions button {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    cursor: pointer;
+    transition: color .2s, transform .2s;
+  }
+  
+  .post-actions button:hover {
+    color: var(--primary-dark);
+    transform: scale(1.1);
+  }
+  
+  .post-comment {
+    padding: 1rem 1.5rem;
+    font-size: .9rem;
+    color: var(--dark-gray);
+  }
+    
+  .events-wrapper {
+    width: 300px;
+  }
+  
+  /* Layout fixo */
+  .events {
+    position: sticky;
+    top: 1rem;
+    width: 100%;
+  }
+  
+  
+  /* Responsivo - em telas pequenas volta ao normal */
+  @media (max-width: 1024px) {
+    .events {
+      position: static;
+      top: auto;
+      right: auto;
+      width: 100%;
+    }
+  
+    .events-wrapper {
+      width: 100%;
+    }
+  }
+  
+  /* Data da publicação */
+  .post-date {
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+  }
+  
+  .post-comments {
+    padding: 1.5rem;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fafafa;
+    border-radius: 0 0 16px 16px;
+  }
+  
+  .comments-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+  }
+  
+  .comment {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-left: 4px solid var(--primary);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .comment-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .comment-author {
+    color: #000;
+  }
+  
+  .comment-content {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #333;
+  }
+
+  /* Estilo para a caixa de comentário falsa */
+.fake-comment-box {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+  }
+  
+  .fake-comment-input {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    outline: none;
+    transition: 0.2s;
+  }
+  
+  .fake-comment-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(0, 150, 199, 0.3);
+  }
+  
+  .fake-comment-submit {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .fake-comment-submit:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  /* ================= Tema Escuro ================= */
+
+body.dark-mode .post-comments,
+body.dark-mode .events-box,
+body.dark-mode .btn-new-post,
+body.dark-mode .post-card {
+  background-color: #000000;
+  border-color: #5a5a5a;
+  color: #f1f1f1;
+}
+
+body.dark-mode .post-date {
+  color: #ffffff;
+}
+
+body.dark-mode .post-text {
+  color: #ffffff;
+}
+
+body.dark-mode .event-desc {
+  color: #ffffff;
+}
+
+body.dark-mode .comment {
+  background-color: #000;
+}
+
+body.dark-mode .comment-author {
+  color: #ffffff;
+}
+
+body.dark-mode .comment-content {
+  color: #ffffff;
+}
+
+body.dark-mode .comment-time {
+  color: #ffffff;
+}
+
+body.dark-mode .fake-comment-box {
+  background-color: #000;
+  color: #ffffff;
+}
+
+body.dark-mode .post-actions button {
+  color: #90caf9;
+}
+
+body.dark-mode .post-actions button:hover {
+  color: #bbdefb;
+}
+
+body.dark-mode .post-location {
+  color: #ffffff;
+}
+
+body.dark-mode .event-item {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+body.dark-mode .event-date {
+  color: #ffffff;
+}
+
+body.dark-mode .fake-comment-box input {
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark-mode .fake-comment-box button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+body.dark-mode .fake-comment-box button:hover {
+  background-color: #444;
+}
+    
+.back-button {
+  margin: 1rem 0;
+}
+
+.back-button button {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button button:hover {
+  background-color: #ddd;
+}
+
+.back-button .material-symbols-outlined {
+  margin-right: 6px;
+  font-size: 20px;
+}
+
