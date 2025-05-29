@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Anton+SC&display=swap');
 
+html {
+    overflow-y: scroll;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +15,9 @@
 body {
     background: #062A6C;
     min-height: 100vh;
-    /* Removi o overflow: hidden para permitir rolagem quando necessário */
+    max-width: none;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -19,16 +25,16 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 5%; /* Usando porcentagem para padding responsivo */
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    padding: 20px 5%;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     z-index: 100;
-    gap: 20px; /* Espaço entre os elementos do grid */
+    position: relative;
 }
 
 .logo img {
-    height: 120px;
+    height: 100px;
     width: auto;
     transition: 0.3s;
 }
@@ -37,28 +43,43 @@ header {
     transform: scale(1.05);
 }
 
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.nav-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
 
 .navigation {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Aumentei o espaçamento entre os itens */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .navigation a {
     text-decoration: none;
     color: white;
-    padding: 10px 20px; /* Aumentei o padding para tornar maior */
+    padding: 10px 20px;
     border-radius: 20px;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 10px; /* Aumentei o espaço entre ícone e texto */
-    font-size: 1.1rem; /* Aumentei o tamanho da fonte */
+    gap: 10px;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
 }
 
 .login-btn {
-    padding: 12px 25px; /* Aumentei o tamanho do botão */
+    padding: 12px 25px;
     background: white;
     color: #062A6C;
     border-radius: 20px;
@@ -68,19 +89,15 @@ header {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.1rem; /* Aumentei o tamanho da fonte */
+    font-family: 'Anton SC', sans-serif;
+    font-size: 1.1rem;
 }
 
-/* Estilos para ícones */
 .material-symbols-outlined {
-    font-size: 1.5rem !important; /* Aumentei o tamanho dos ícones */
+    font-size: 1.5rem !important;
 }
 
-/* Efeitos hover */
-.navigation a:hover, 
+.navigation a:hover,
 .navigation a.active {
     background: white;
     color: #062A6C;
@@ -92,66 +109,36 @@ header {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Media Queries para responsividade */
-@media (max-width: 1200px) {
-    .navigation {
-        gap: 15px;
-    }
-    .navigation a {
-        padding: 8px 15px;
-        font-size: 1rem;
-    }
-}
-
 @media (max-width: 992px) {
-    header {
-        grid-template-columns: auto 1fr;
-        grid-template-rows: auto auto;
+    .nav-toggle {
+        display: flex;
     }
-    .navigation {
-        grid-column: 1 / -1;
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding-bottom: 10px;
-    }
-    .login-btn {
-        grid-row: 1;
-        grid-column: 2;
-    }
-}
 
-@media (max-width: 768px) {
-    header {
-        padding: 20px 3%;
-    }
-    .logo img {
-        height: 90px;
-    }
-    .navigation a {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-    .login-btn {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 576px) {
     .navigation {
-        gap: 10px;
-    }
-    .navigation a {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #062A6C;
         flex-direction: column;
-        padding: 8px 10px;
-        font-size: 0.8rem;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
     }
-    .material-symbols-outlined {
-        font-size: 1.2rem !important;
+
+    .navigation.open {
+        max-height: 500px;
+    }
+
+    .navigation a {
+        padding: 15px;
+        font-size: 1rem;
+        width: 100%;
+        justify-content: center;
     }
 }
 
-/* Botão de tema */
 .theme-btn {
     background: none;
     border: none;
@@ -166,8 +153,6 @@ header {
     transform: scale(1.1);
 }
 
-
-/* Overlay com blur */
 .overlay {
     position: fixed;
     top: 0; left: 0;
@@ -178,14 +163,13 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
-  
-  .overlay.hidden {
+}
+
+.overlay.hidden {
     display: none;
-  }
-  
-  /* Card expandido */
-  .notificacao-expandida {
+}
+
+.notificacao-expandida {
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -194,22 +178,21 @@ header {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     position: relative;
     animation: fadeIn 0.3s ease;
-  }
-  
-  .fechar-expandida {
+}
+
+.fechar-expandida {
     position: absolute;
     top: 10px; right: 15px;
     font-size: 24px;
     cursor: pointer;
     color: #333;
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
-  }
-  
-  /* Adicione ao seu CSS existente */
+}
+
 .notification-badge {
     position: absolute;
     top: -5px;
@@ -230,7 +213,6 @@ header {
     position: relative;
 }
 
-/* Melhorando a animação */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
@@ -241,7 +223,6 @@ header {
     animation: pulse 1.5s infinite;
 }
 
-/* Rodapé Global */
 .site-footer {
     background-color: #000000;
     color: #ffffff;
@@ -254,17 +235,6 @@ header {
     word-break: break-word;
 }
 
-/* Layout base para manter o rodapé no fim da página */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-
 .container {
     flex: 1;
 }
-
-
-  

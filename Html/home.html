@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/contador.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
 </head>
 <body>
 
@@ -26,10 +28,11 @@
         <span class="material-symbols-outlined">location_on</span>
         Melhores locais
       </a>
-      <a href="notificacao.html" data-page="notifications" data-page-title="notificações">
-        <span class="material-symbols-outlined">notifications</span>
-        Notificações
-      </a>
+        <a href="notificacao.html" data-page="notifications" data-page-title="Notificações">
+            <span class="material-symbols-outlined">notifications</span>
+            Notificações
+            <span class="badge" id="contador">0</span>
+        </a>
       <a href="perfil.html" data-page="profile" data-page-title="perfil">
         <span class="material-symbols-outlined">person</span>
         Perfil
@@ -65,7 +68,7 @@
         </div>
         <div class="post-content">
           <h3 class="post-author">@lula <span class="post-date">• 06/05/2025</span></h3>
-          <p class="post-location">Brasília - São Paulo</p>
+          <p class="post-location">Brasília - SP • Lago azul</p>
           <p class="post-text">Meu cumpanheiro pescou hoje!</p>
         </div>
         <div class="post-actions">
@@ -94,7 +97,7 @@
     </div>
     <div class="post-content">
       <h3 class="post-author">@pessi <span class="post-date">• 06/05/2025</span></h3>
-      <p class="post-location">Matão - SP</p>
+      <p class="post-location">Matão - SP • Recanto do Pescador</p>
       <p class="post-text">Olha o peixe que o pai pego!</p>
     </div>
     <div class="post-actions">
@@ -126,6 +129,7 @@
           <div>
             <p class="event-title">Torneio de Tucunaré</p>
             <p class="event-date">10/05/2025</p>
+            <p class="event-date">• Recanto do Pescador</p>
             <p class="event-desc">Participe do maior torneio do estado!</p>
           </div>
         </div>
@@ -137,6 +141,7 @@
           <div>
             <p class="event-title">Pesca de Praia</p>
             <p class="event-date">20/05/2025</p>
+            <p class="event-date">• Pesqueiro Rota do Peixe</p>
             <p class="event-desc">Competição de pesca na orla.</p>
           </div>
         </div>
@@ -148,6 +153,7 @@
           <div>
             <p class="event-title">Campeonato de Caiaque</p>
             <p class="event-date">05/06/2025</p>
+            <p class="event-date">• Pesqueiro 311</p>
             <p class="event-desc">Pesca esportiva de caiaque.</p>
           </div>
         </div>

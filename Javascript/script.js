@@ -62,7 +62,7 @@ function getPostById(postId) {
       id: 1,
       author: "@lula",
       date: "06/05/2025",
-      location: "Brasília - São Paulo",
+      location: "Brasília - SP • Lago azul",
       text: "Meu cumpanheiro pescou hoje!",
       image: "https://pbs.twimg.com/media/CxEcXvsW8AA5OTJ.jpg",
       comments: [
@@ -74,7 +74,7 @@ function getPostById(postId) {
       id: 2,
       author: "@pessi",
       date: "06/05/2025",
-      location: "Matão - SP",
+      location: "Matão - SP • Recanto do Pescador",
       text: "Olha o peixe que o pai pego!",
       image: "https://images7.memedroid.com/images/UPLOADED944/6502578f5efae.jpeg",
       comments: [
@@ -92,4 +92,16 @@ document.querySelectorAll('.post-actions button').forEach(button => {
     e.stopPropagation(); // Impede que o evento chegue ao post-card
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const contador = localStorage.getItem('contadorNotificacoes');
+  const contadorElement = document.getElementById('contador');
+
+  if (contadorElement && contador !== null) {
+    contadorElement.textContent = contador;
+    contadorElement.style.display = parseInt(contador) > 0 ? 'inline-block' : 'none';
+  }
+});
+
 

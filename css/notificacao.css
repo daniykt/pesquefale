@@ -10,6 +10,8 @@
       flex-direction: column;
       gap: 10px;
       margin-bottom: 60px; /* espaço antes do rodapé */
+      width: 900px; /* fixa completamente, só use se realmente quiser isso */
+      max-width: none;
     }
     
 

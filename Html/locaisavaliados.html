@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Locais Mais Bem Avaliados</title>
   <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/contador.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <!--Linkei a página html com css-->
   <link rel="stylesheet" href="../css/locaisavaliados.css">
@@ -28,6 +29,7 @@
         <a href="notificacao.html">
             <span class="material-symbols-outlined">notifications</span>
             Notificações
+            <span class="badge" id="contador">0</span>
         </a>
         <a href="perfil.html">
             <span class="material-symbols-outlined">person</span>
@@ -44,57 +46,80 @@
         Entra/Cadastro
     </a>
 </header>
-    <!--Fiz a estrutura para a página com o nome da página, foto do local, nome do local, estrelas de avaliação, breve descrição do local e localização-->
-  <h1> ⭐ Locais + Bem Avaliados</h1>
-  <div class="container">
-    <div class="card">
-      <img src="https://praturista.com/wp-content/uploads/2017/05/sao-carlos-sp-praturista-0089600-37-M2.jpg" alt="Lago Azul/direitos autorais da foto concedido.">
-      <h2>Lago Azul</h2>
-      <p class="stars">★★★★★</p>
-      <p>Ambiente natural e ideal para pesca esportiva.</p>
-      <p><strong>Localização:</strong> São Carlos</p>
+<div class="main-content">
+  <h1>⭐ Locais + Bem Avaliados</h1>
+
+  <section class="categoria">
+    <h2 class="categoria-titulo">Parques e Lagos</h2>
+    <div class="grid-container">
+      <div class="card">
+        <img src="https://praturista.com/wp-content/uploads/2017/05/sao-carlos-sp-praturista-0089600-37-M2.jpg" alt="Lago Azul">
+        <div class="card-content">
+          <h3>Lago Azul</h3>
+          <p class="stars">★★★★★</p>
+          <p>Ambiente natural e ideal para pesca esportiva.</p>
+          <p><strong>Localização:</strong> São Carlos</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://parqueaquatico.com.br/wp-content/uploads/2023/10/Foto-17.jpg" alt="Lago do Pescador">
+        <div class="card-content">
+          <h3>Lago do Pescador</h3>
+          <p class="stars">★★★★★</p>
+          <p>Ambiente familiar com ótimos quiosques.</p>
+          <p><strong>Localização:</strong> Campinas</p>
+        </div>
+      </div>
     </div>
-    <!--Fiz a estrutura para a página com o nome da página, foto do local, nome do local, estrelas de avaliação, breve descrição do local e localização-->
-    <div class="card">
-      <img src="https://www.diariodaregiao.com.br/image/policy:1.834469:1639433028/image.jpg" alt="Represa do Vale/direitos autorais da foto concedido">
-      <h2>Represa do Vale</h2>
-      <p class="stars">★★★★☆</p>
-      <p>Grande variedade de peixes e ótima estrutura.</p>
-      <p><strong>Localização:</strong> Ribeirão Preto</p>
+  </section>
+
+  <section class="categoria">
+    <h2 class="categoria-titulo">Represas</h2>
+    <div class="grid-container">
+      <div class="card">
+        <img src="https://www.diariodaregiao.com.br/image/policy:1.834469:1639433028/image.jpg" alt="Represa do Vale">
+        <div class="card-content">
+          <h3>Represa do Vale</h3>
+          <p class="stars">★★★★☆</p>
+          <p>Grande variedade de peixes e ótima estrutura.</p>
+          <p><strong>Localização:</strong> Ribeirão Preto</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://vault.pulsarimagens.com.br/file/thumb/11JPR543.jpg" alt="Represa da Paz">
+        <div class="card-content">
+          <h3>Represa da Paz</h3>
+          <p class="stars">★★★★☆</p>
+          <p>Ideal para relaxar e pescar em meio à natureza.</p>
+          <p><strong>Localização:</strong> Piracicaba</p>
+        </div>
+      </div>
     </div>
-    <!--Fiz a estrutura para a página com o nome da página, foto do local, nome do local, estrelas de avaliação, breve descrição do local e localização-->
-    <div class="card">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/98/83/b4/pesca-esportiva.jpg?w=900&h=500&s=1" alt="Pesqueiro da Serra/direitos autorais da foto concedido">
-      <h2>Pesqueiro da Serra</h2>
-      <p class="stars">★★★★★</p>
-      <p>Local tranquilo e ideal para toda a família.</p>
-      <p><strong>Localização:</strong> Poços de Caldas</p>
+  </section>
+
+  <section class="categoria">
+    <h2 class="categoria-titulo">Pesqueiros</h2>
+    <div class="grid-container">
+      <div class="card">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/98/83/b4/pesca-esportiva.jpg?w=900&h=500&s=1" alt="Pesqueiro da Serra">
+        <div class="card-content">
+          <h3>Pesqueiro da Serra</h3>
+          <p class="stars">★★★★★</p>
+          <p>Local tranquilo e ideal para toda a família.</p>
+          <p><strong>Localização:</strong> Poços de Caldas</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://busbud.imgix.net/city-hires/1474307214349-Salvador,Bahia,Brazil.jpg?h=480&w=720&auto=format%2Ccompress&fit=crop" alt="Rio Verde Park">
+        <div class="card-content">
+          <h3>Rio Verde Park</h3>
+          <p class="stars">★★★★☆</p>
+          <p>Pesca esportiva e infraestrutura excelente.</p>
+          <p><strong>Localização:</strong> Uberlândia</p>
+        </div>
+      </div>
     </div>
-    <!--Fiz a estrutura para a página com o nome da página, foto do local, nome do local, estrelas de avaliação, breve descrição do local e localização-->
-    <div class="card">
-      <img src="https://busbud.imgix.net/city-hires/1474307214349-Salvador,Bahia,Brazil.jpg?h=480&w=720&auto=format%2Ccompress&fit=crop" alt="Rio Verde Park/direitos autorais da foto concedido">
-      <h2>Rio Verde Park</h2>
-      <p class="stars">★★★★☆</p>
-      <p>Pesca esportiva e infraestrutura excelente.</p>
-      <p><strong>Localização:</strong> Uberlândia</p>
     </div>
-    <!--Fiz a estrutura para a página com o nome da página, foto do local, nome do local, estrelas de avaliação, breve descrição do local e localização-->
-    <div class="card">
-      <img src="https://parqueaquatico.com.br/wp-content/uploads/2023/10/Foto-17.jpg" alt="Lago do Pescador/direitos autorais da foto concedido">
-      <h2>Lago do Pescador</h2>
-      <p class="stars">★★★★★</p>
-      <p>Ambiente familiar com ótimos quiosques.</p>
-      <p><strong>Localização:</strong> Campinas</p>
-    </div>
-    <!--Fiz a estrutura para a página com o nome da página, foto do local, nome do local, estrelas de avaliação, breve descrição do local e localização-->
-    <div class="card">
-      <img src="https://vault.pulsarimagens.com.br/file/thumb/11JPR543.jpg" alt="Represa da Paz/direitos autorais da foto concedido">
-      <h2>Represa da Paz</h2>
-      <p class="stars">★★★★☆</p>
-      <p>Ideal para relaxar e pescar em meio à natureza.</p>
-      <p><strong>Localização:</strong> Piracicaba</p>
-    </div>
-  </div>
     <!-- Rodapé -->
     <footer class="site-footer">
       <p>© 2025 Pesque & Fale – Todos os direitos reservados</p>

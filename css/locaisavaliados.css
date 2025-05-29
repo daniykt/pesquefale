@@ -1,79 +1,97 @@
-body { 
-    font-family: Arial, sans-serif;
-    background-color: #062A6C;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #062A6C;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 32px;
+}
+
+.categoria {
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.categoria-titulo {
+  color: white;
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: left;
+  border-left: 5px solid gold;
+  padding-left: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.stars {
+  color: gold;
+  font-size: 18px;
+  margin: 4px 0;
+}
+
+.card-content p {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .categoria-titulo {
     text-align: center;
   }
-  
-  h1 {
-    background-color: #062A6C;
-    color: white;
-    padding: 20px 0;
-    margin-bottom: 30px;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 20px;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 15px;
-    width: 300px;
-    text-align: left;
-  }
-  
-  .card img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .card h2 {
-    margin: 10px 0 5px 0;
-  }
-  
-  .stars {
-    color: gold;
-    font-size: 18px;
-    margin: 5px 0;
-  }
-  
-  .card p {
-    margin: 5px 0;
-  }
+}
 
-  .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
+/* ======== DARK MODE ========= */
 
-  /* ======== DARK MODE ========= */
+body.dark-mode h1,
+body.dark-mode .categoria-titulo {
+  color: #f0f0f0;
+}
 
 body.dark-mode .card {
-  background-color: #000000;
+  background-color: #161b22;
   color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
 }
 
 body.dark-mode .stars {
-  color: #ffd700; /* continua dourado */
+  color: #ffd700;
 }
-
-  /*para o body e h1 coloquei esse tom de azul pois foi o tom escolhido pelo grupo e oq achamos melhor*/
-  /*para o card coloquei branco para destacá-lo*/
-  /*para a fonte coloquei arial pois acho mais vísivel e branco para ser mais acessível*/
-  /*cor gold para as estrelas também foi escolhido pelo grupo*/
-  /*Todas as outras definições foram reajustes para o card e a foto do local de pesca ficar bem vísivel.*/
-  /*Assim como margem, largura, tamanho da fonte e alinhamento dos textos onde coloquei no centro para maior visibilidade*/
-  
