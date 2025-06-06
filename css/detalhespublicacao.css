@@ -89,14 +89,7 @@
     .btn-text {
       flex: 1;
     }
-  
-    /* Imagem de perfil */
-    .profile-img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+
     
     /* Campo de texto dentro do botão */
     .btn-new-post input {
@@ -113,23 +106,6 @@
       outline: none;
       color: var(--primary);
     }
-    
-  
-  
-  /* Layout principal */
-  .main-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  
-  /* Feed */
-  .feed {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
   
   .post-card {
     background: var(--white);
@@ -144,25 +120,6 @@
   .post-card:hover {
     transform: translateY(-4px); /* Eleva o card ao passar o mouse */
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1); /* Sombra mais intensa */
-  }
-  
-
-  
-  /* Conteúdo da publicação */
-  .post-content {
-    padding: 1.5rem 0;
-  }
-  
-  .post-author {
-    margin-bottom: .5rem;
-    color: var(--primary);
-    font-weight: bold;
-  }
-  
-  .post-location {
-    margin-bottom: 1rem;
-    color: var(--dark-gray);
-    font-size: .9rem;
   }
   
   .post-text {
@@ -237,26 +194,6 @@
   
   .post-text {
     margin-bottom: 1rem;
-  }
-  
-  .post-actions {
-    display: flex;
-    justify-content: space-around;
-    padding: .75rem 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .post-actions button {
-    background: none;
-    border: none;
-    color: var(--primary);
-    font-size: .95rem;
-    display: flex;
-    align-items: center;
-    gap: .3rem;
-    cursor: pointer;
-    transition: color .2s, transform .2s;
   }
   
   .post-actions button:hover {
