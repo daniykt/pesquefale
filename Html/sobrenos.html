@@ -5,9 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sobre Nós</title>
     <link rel="stylesheet" href="../css/sobrenos.css" />
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
+    <!-- Cabeçalho -->
+  <header>
+    <h2 class="logo"><img src="../imagens/logo/logo.png" alt="Nome do Site"></h2>
+    <nav class="navigation">
+      <a href="home.html" data-page="home" data-page-title="página inicial" class="active">
+        <span class="material-symbols-outlined">home</span>
+         Página Inicial
+      </a>
+      <a href="pesquisa.html" data-page="search" data-page-title="pesquisa">
+        <span class="material-symbols-outlined">search</span>
+        Pesquisa
+      </a>
+      <a href="locaisavaliados.html" data-page="location" data-page-title="melhores locais">
+        <span class="material-symbols-outlined">location_on</span>
+        Melhores locais
+      </a>
+        <a href="notificacao.html" data-page="notifications" data-page-title="Notificações">
+            <span class="material-symbols-outlined">notifications</span>
+            Notificações
+            <span class="badge" id="contador">0</span>
+        </a>
+      <a href="perfil.html" data-page="profile" data-page-title="perfil">
+        <span class="material-symbols-outlined">person</span>
+        Perfil
+      </a>
+      <div class="theme-toggle">
+        <button id="theme-btn" class="theme-btn">
+            <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+    </div>
+    </nav>
+
+    <a href="login.html" class="login-btn"> <span class="material-symbols-outlined">login</span>Entra/Cadastro</a>
+  </header>
     <section class="sobre-nos">
         <h1>Nossa Equipe</h1>
         <div class="container">
@@ -153,5 +189,25 @@
 
         </div>
     </section>
+    <footer>
+    <div class="footer-container">
+      <div>
+        <h3>Sobre Nós</h3>
+        <p>Grupo de estudantes dedicados ao desenvolvimento de iniciativas voltadas à melhoria do trabalho socioeconômico em Matão-SP e região.</p>
+      </div>
+      <div>
+        <h3>Links Úteis</h3>
+        <a href="pesquisa.html">Pesquisa de Locais</a>
+        <a href="locaisavaliados.html">Melhores locais</a>
+        <a href="notificacao.html">Notificações</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>Email: pesquefale@gmail.com</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; Pesque & Fale 2025 - Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>

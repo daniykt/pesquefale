@@ -1,12 +1,11 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #062A6C;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  color: white;
+  color: #062A6C;
   text-align: center;
   padding: 30px 0;
   font-size: 32px;
@@ -19,7 +18,7 @@ h1 {
 }
 
 .categoria-titulo {
-  color: white;
+  color: #062A6C;
   font-size: 26px;
   margin-bottom: 20px;
   text-align: left;
@@ -83,7 +82,7 @@ h1 {
 
 body.dark-mode h1,
 body.dark-mode .categoria-titulo {
-  color: #f0f0f0;
+  color: #062A6C;
 }
 
 body.dark-mode .card {

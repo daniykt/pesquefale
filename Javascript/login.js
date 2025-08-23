@@ -50,3 +50,5 @@ document.querySelectorAll('.toggle-password').forEach(icon => {
         }
     });
 });
+
+

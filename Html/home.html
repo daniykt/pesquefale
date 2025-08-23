@@ -13,7 +13,7 @@
 <body>
   <!-- Cabeçalho -->
   <header>
-    <h2 class="logo"><img src="../imagens/logo.png" alt="Nome do Site"></h2>
+    <h2 class="logo"><img src="../imagens/logo/logo.png" alt="Nome do Site"></h2>
     <nav class="navigation">
       <a href="home.html" data-page="home" data-page-title="página inicial" class="active">
         <span class="material-symbols-outlined">home</span>
@@ -35,6 +35,10 @@
       <a href="perfil.html" data-page="profile" data-page-title="perfil">
         <span class="material-symbols-outlined">person</span>
         Perfil
+      </a>
+       <a href="sobrenos.html" data-page="about" data-page-title="sobre-nos>
+        <span class="material-symbols-outlined">groups</span>
+        Equipe
       </a>
       <div class="theme-toggle">
         <button id="theme-btn" class="theme-btn">
@@ -120,7 +124,7 @@
 
         <div class="event-item">
           <div class="event-image">
-            <img src="../imagens/evento1.jpg" alt="Imagem do evento">
+            <img src="../imagens/eventos/evento1.jpg" alt="Imagem do evento">
           </div>
           <div>
             <p class="event-title">Torneio de Tucunaré</p>
@@ -132,7 +136,7 @@
         <hr>
         <div class="event-item">
           <div class="event-image">
-            <img src="../imagens/evento2.jpg" alt="Imagem do evento">
+            <img src="../imagens/eventos/evento2.jpg" alt="Imagem do evento">
           </div>
           <div>
             <p class="event-title">Pesca de Praia</p>
@@ -144,7 +148,7 @@
         <hr>
         <div class="event-item">
           <div class="event-image">
-            <img src="../imagens/evento3.jpg" alt="Imagem do evento">
+            <img src="../imagens/eventos/evento3.jpg" alt="Imagem do evento">
           </div>
           <div>
             <p class="event-title">Campeonato de Caiaque</p>
@@ -159,8 +163,25 @@
   </main>
 
   <!-- Rodapé -->
-  <footer class="site-footer">
-    <p>© 2025 Pesque & Fale – Todos os direitos reservados</p>
+<footer>
+    <div class="footer-container">
+      <div>
+        <h3>Sobre Nós</h3>
+        <p>Grupo de estudantes dedicados ao desenvolvimento de iniciativas voltadas à melhoria do trabalho socioeconômico em Matão-SP e região.</p>
+      </div>
+      <div>
+        <h3>Links Úteis</h3>
+        <a href="pesquisa.html">Pesquisa de Locais</a>
+        <a href="locaisavaliados.html">Melhores locais</a>
+        <a href="notificacao.html">Notificações</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>Email: pesquefale@gmail.com</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; Pesque & Fale 2025 - Todos os direitos reservados.</p>
   </footer>
   <script src="../Javascript/script.js"></script>
 </body>

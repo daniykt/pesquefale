@@ -70,13 +70,14 @@ body {
     border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 1rem; /* Espaço entre a imagem e o campo de texto */
+    gap: 12rem; /* Espaço entre a imagem e o campo de texto */
     cursor: pointer;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 800px; /* Limita a largura do botão */
-    width: 100%; /* Faz o botão ocupar 100% da largura do contêiner */
+    width: 50%; /* Faz o botão ocupar 100% da largura do contêiner */
     margin: 0 auto; /* Centraliza o botão dentro do contêiner */
+
 }
 
   
@@ -84,10 +85,6 @@ body {
   .btn-new-post:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
-  }
-  
-  .btn-text {
-    flex: 1;
   }
 
   /* Imagem de perfil */
