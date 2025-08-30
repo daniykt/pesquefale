@@ -19,7 +19,7 @@ function carregarNotificacoes() {
   const salvas = JSON.parse(localStorage.getItem('notificacoes'));
 
   if (!salvas || salvas.length === 0) return;
-
+   if (!container) return;
   container.innerHTML = '';
 
   salvas.forEach(noti => {
@@ -56,6 +56,15 @@ function atualizarContador() {
 
   localStorage.setItem('contadorNotificacoes', notificacoesNaoLidas.length);
   salvarNotificacoes();
+}
+
+function pegaNotificacoes() {
+  const notificacoes = Number(localStorage.getItem('contadorNotificacoes'));
+  console.log(notificacoes);
+  const contador = document.getElementById('contador');
+  contador.innerText = notificacoes;
+  contador.style.display = notificacoes > 0 ? 'inline-block' : 'none';
+
 }
 
 function marcarComoLida(botao) {
@@ -96,6 +105,7 @@ function excluir(botao) {
   atualizarContador();
 }
 
+document.addEventListener('DOMContentLoaded', pegaNotificacoes);
 document.addEventListener('DOMContentLoaded', carregarNotificacoes);
 
 

@@ -1,107 +1,66 @@
-
-  // Detecta a página atual pelo nome do arquivo na URL
-  const currentPage = window.location.pathname.split("/").pop(); // Ex: perfil.html
-
-  // Pega todos os links da nav com data-page
-  const links = document.querySelectorAll("nav.navigation a");
-
-  links.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === currentPage) {
-      link.classList.add("active");
-    }
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const themeBtn = document.getElementById('theme-btn');
-    const body = document.body;
-    
-    // Verifica o tema salvo no localStorage (se já foi escolhido antes)
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    
-    // Aplica o tema salvo
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeBtn.innerHTML = '<span class="material-symbols-outlined">light_mode</span>';
-    }
-    
-    // Alterna entre temas quando o botão é clicado
-    themeBtn.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-        
-        // Salva a preferência no localStorage
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-            themeBtn.innerHTML = '<span class="material-symbols-outlined">light_mode</span>';
-        } else {
-            localStorage.setItem('theme', 'light');
-            themeBtn.innerHTML = '<span class="material-symbols-outlined">dark_mode</span>';
-        }
-    });
-});
-
-// Função para redirecionar para a página de detalhes
-function redirectToPostDetails(postId) {
-  // Armazena os dados da publicação que será visualizada
-  const post = getPostById(postId); // Você precisará implementar esta função
-  
-  // Salva os dados no localStorage para acessar na página de detalhes
-  localStorage.setItem('currentPost', JSON.stringify(post));
-  
-  // Redireciona para a página de detalhes
-  window.location.href = '../html/detalhespublicacao.html';
-}
-
-// Função para obter os dados da publicação (exemplo básico)
-function getPostById(postId) {
-  // Na prática, você pode buscar isso de um array ou API
-  // Aqui estou simulando com dados fixos baseados no seu HTML
-  
-  const posts = {
-    1: {
-      id: 1,
-      author: "@lula",
-      date: "06/05/2025",
-      location: "Brasília - SP • Lago azul",
-      text: "Meu cumpanheiro pescou hoje!",
-      image: "https://pbs.twimg.com/media/CxEcXvsW8AA5OTJ.jpg",
-      comments: [
-        { author: "@bolsonaro", text: "Não era pra postar, tá ok?" },
-        { author: "@pl", text: "kkkkkkkkkkk" }
-      ]
-    },
-    2: {
-      id: 2,
-      author: "@pessi",
-      date: "06/05/2025",
-      location: "Matão - SP • Recanto do Pescador",
-      text: "Olha o peixe que o pai pego!",
-      image: "https://images7.memedroid.com/images/UPLOADED944/6502578f5efae.jpeg",
-      comments: [
-        { author: "@neymar", text: "pode não paizão" }
-      ]
-    }
-  };
-  
-  return posts[postId];
-}
-
-// Adicione este evento para prevenir que cliques nos botões de ação propaguem para o post-card
-document.querySelectorAll('.post-actions button').forEach(button => {
-  button.addEventListener('click', function(e) {
-    e.stopPropagation(); // Impede que o evento chegue ao post-card
-  });
-});
-
-
+/* ===== NAV: marcar item selecionado, persistir e atualizar ao scroll ===== */
 document.addEventListener('DOMContentLoaded', () => {
-  const contador = localStorage.getItem('contadorNotificacoes');
-  const contadorElement = document.getElementById('contador');
+  const navLinks = Array.from(document.querySelectorAll('#navLinks a')); // pega os links da UL
+  const sections = Array.from(document.querySelectorAll('section[id]')); // seções com id pra sync scroll
 
-  if (contadorElement && contador !== null) {
-    contadorElement.textContent = contador;
-    contadorElement.style.display = parseInt(contador) > 0 ? 'inline-block' : 'none';
+  // Função para definir active e salvar
+  function setActiveLink(link) {
+    navLinks.forEach(l => l.classList.remove('active'));
+    if (!link) return;
+    link.classList.add('active');
+    try {
+      localStorage.setItem('activeNav', link.getAttribute('href'));
+    } catch (e) {
+      // no localStorage? ignore
+    }
   }
+
+  // Restora pelo hash da URL ou pelo localStorage
+  const saved = localStorage.getItem('activeNav');
+  const currentHash = window.location.hash;
+  let initial = null;
+  if (currentHash) {
+    initial = navLinks.find(l => l.getAttribute('href') === currentHash);
+  }
+  if (!initial && saved) {
+    initial = navLinks.find(l => l.getAttribute('href') === saved);
+  }
+  if (!initial) {
+    // opcional: marca o primeiro link como padrão
+    initial = navLinks[0];
+  }
+  setActiveLink(initial);
+
+  // Clique: marca e (se for âncora) deixa o smooth scroll do menu.js cuidar da rolagem
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      setActiveLink(link);
+
+      // Se for menu mobile (tu tem toggle), fecha o menu ao clicar
+      const navList = document.getElementById('navLinks');
+      if (navList && navList.classList.contains('open')) {
+        navList.classList.remove('open');
+      }
+    });
+  });
+
+  // Atualiza active conforme o scroll — considera um offset pra cabeçalho
+  function onScroll() {
+    const scrollPos = window.scrollY + 120; // ajuste se teu header for maior/menor
+    for (let sec of sections) {
+      if (sec.offsetTop <= scrollPos && (sec.offsetTop + sec.offsetHeight) > scrollPos) {
+        const id = `#${sec.id}`;
+        const link = navLinks.find(l => l.getAttribute('href') === id);
+        if (link) {
+          // evita escrever no localStorage a todo scroll — só se diferente
+          if (!link.classList.contains('active')) setActiveLink(link);
+          break;
+        }
+      }
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  // dispara uma vez para atualizar no load
+  onScroll();
 });
-
-

@@ -5,52 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sobre Nós</title>
     <link rel="stylesheet" href="../css/sobrenos.css" />
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <!-- Cabeçalho -->
-  <header>
-    <h2 class="logo"><img src="../imagens/logo/logo.png" alt="Nome do Site"></h2>
-    <nav class="navigation">
-      <a href="home.html" data-page="home" data-page-title="página inicial" class="active">
+<!-- Navegação Lateral -->
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <img src="../imagens/logo/logo.jpg" alt="Pesque & Fale" class="logo" width="100">
+      <h2 class="site-title"></h2>
+    </div>
+   
+    <div class="nav-menu">
+      <a href="home.html" class="nav-item active">
         <span class="material-symbols-outlined">home</span>
-         Página Inicial
+        <span class="nav-text">Página Inicial</span>
       </a>
-      <a href="pesquisa.html" data-page="search" data-page-title="pesquisa">
+      <a href="pesquisa.html" class="nav-item">
         <span class="material-symbols-outlined">search</span>
-        Pesquisa
+        <span class="nav-text">Pesquisa</span>
       </a>
-      <a href="locaisavaliados.html" data-page="location" data-page-title="melhores locais">
+      <a href="locaisavaliados.html" class="nav-item">
         <span class="material-symbols-outlined">location_on</span>
-        Melhores locais
+        <span class="nav-text">Melhores Locais</span>
       </a>
-        <a href="notificacao.html" data-page="notifications" data-page-title="Notificações">
-            <span class="material-symbols-outlined">notifications</span>
-            Notificações
-            <span class="badge" id="contador">0</span>
+        <a href="notificacao.html" class="nav-item">
+          <span class="material-symbols-outlined">
+            notifications
+            <span class="badge" id="contador">3</span>
+          </span>
+          <span class="nav-text">Notificações</span>
         </a>
-      <a href="perfil.html" data-page="profile" data-page-title="perfil">
-        <span class="material-symbols-outlined">person</span>
-        Perfil
+      <a href="sobrenos.html" class="nav-item">
+        <span class="material-symbols-outlined">school</span>
+        <span class="nav-text">Sobre nós</span>
       </a>
+      <a href="perfil.html" class="nav-item">
+        <span class="material-symbols-outlined">person</span>
+        <span class="nav-text">Perfil</span>
+      </a>
+      </div>
+    </div>
+ 
+    <div class="sidebar-footer">
       <div class="theme-toggle">
         <button id="theme-btn" class="theme-btn">
-            <span class="material-symbols-outlined">dark_mode</span>
+          <span class="material-symbols-outlined">dark_mode</span>
+          <span class="nav-text">Modo Escuro</span>
         </button>
+      </div>
     </div>
-    </nav>
-
-    <a href="login.html" class="login-btn"> <span class="material-symbols-outlined">login</span>Entra/Cadastro</a>
-  </header>
+  </nav>
+  <div class="column">
     <section class="sobre-nos">
         <h1>Nossa Equipe</h1>
         <div class="container">
 
             <!-- Danilo -->
             <div class="card">
-                <img src="https://scontent.faqa6-1.fna.fbcdn.net/v/t39.30808-1/536267047_122101221722979579_8799093974272126823_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=111fe6&_nc_ohc=8S0fGtOrUU8Q7kNvwHSSiwr&_nc_oc=AdmPDiDjPkhXyaFokRDwWyLvH615cYP8_MbheMrsW7fxIhLBpPlxXId2OLxpDXyHyDo&_nc_zt=24&_nc_ht=scontent.faqa6-1.fna&_nc_gid=vPenX-GJhPH-UG3a1BhqsQ&oh=00_AfWdrYZ3XNjqjKuLsg9cfh3_QfkDaSm9kNurr9w-NiVOdg&oe=68A95EEB" alt="Foto de Danilo Silva" />
+                <img src="../imagens/sobrenos/fotodanilo.jpg" alt="Foto de Danilo Silva" />
                 <h2>Danilo Silva</h2>
                 <p class="profissao">Desenvolvedor Full-Stack em Formação</p>
                 <p class="descricao">
@@ -74,7 +90,7 @@
 
             <!-- Henrique -->
             <div class="card">
-                <img src="https://scontent.faqa6-1.fna.fbcdn.net/v/t39.30808-1/536268026_122101311914979579_2624315519579714965_n.jpg?stp=c0.0.1200.1200a_dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=111fe6&_nc_ohc=P32-uEzSQ8gQ7kNvwFHAkoi&_nc_oc=AdkFCQ4-fQgwNGuubnFejzzvI76u-ZSFAUmU8816HwNNDM-pws9s--hv3Oid6ca4Kks&_nc_zt=24&_nc_ht=scontent.faqa6-1.fna&_nc_gid=8lJefki88IjLXePFgf4pVw&oh=00_AfU2FFsm7HZRMDEphhL8-Lw4ljaRV0SJMTIWhWe_VwdXNg&oe=68A99AEF" alt="Foto de Henrique Tavares" />
+                <img src="../imagens/sobrenos/fotohenrique.jpg" alt="Foto de Henrique Tavares" />
                 <h2>Henrique Tavares</h2>
                 <p class="profissao">Desenvolvedor Front-End | Co-Fundador</p>
                 <p class="descricao">
@@ -97,7 +113,7 @@
 
             <!-- Vinícius -->
             <div class="card">
-                <img src="https://scontent.faqa6-1.fna.fbcdn.net/v/t39.30808-1/533042680_1296653945376766_1197057589099929068_n.jpg?stp=c0.515.720.720a_dst-jpg_s160x160_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGNpK8fQh4oQZuytSDQwabjaqzzNkSBdVhqrPM2RIF1WNxEpBF5Ei3oCqnSNH5YTd0C_ndQEyd5ppXz5KYQtmks&_nc_ohc=rc44k7TAyWIQ7kNvwEYHFR6&_nc_oc=AdmpxwWVXiL9omtWJqX0D1FDjq2cy44jNjdY5033YF_orUa_86d-JpHTr1EpSbc8yCI&_nc_zt=24&_nc_ht=scontent.faqa6-1.fna&_nc_gid=Gg7gMrK5TxTY05v30VYzAA&oh=00_AfXbg5TU2OqbCnXjKQ4Hk9r7orwjbrsSbJviqnw609oiwA&oe=68A573E7" alt="Foto de Vinícius Bovo" />
+                <img src="../imagens/sobrenos/fotovinicius.jpg" alt="Foto de Vinícius Bovo" />
                 <h2>Vinícius Bovo</h2>
                 <p class="profissao">Desenvolvedor Front-End | Co-Fundador</p>
                 <p class="descricao">
@@ -120,7 +136,7 @@
 
             <!-- Lucas -->
             <div class="card">
-                <img src="https://scontent.faqa6-1.fna.fbcdn.net/v/t39.30808-1/536270329_122101312226979579_7157738336299286936_n.jpg?stp=c0.342.720.720a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=111fe6&_nc_ohc=La2uRDmCz0AQ7kNvwFwxedc&_nc_oc=AdkvoLs-ciZg_9i3dgi00_3mQ_ei4XTpPAE-IlAr1Qt7lyCrKHoT9fNo-jKRW8aDzLw&_nc_zt=24&_nc_ht=scontent.faqa6-1.fna&_nc_gid=9migfQBRET6hLEvr-ME1jw&oh=00_AfXQ9R-ExgNIFtoU9pUjcZvWR8J1ZprUnMQE0COLhyhC6A&oe=68A99B4F" alt="Foto de Lucas Catto" />
+                <img src="../imagens/sobrenos/fotolucas.jpg" alt="Foto de Lucas Catto" />
                 <h2>Lucas Catto</h2>
                 <p class="profissao">Desenvolvedor Front-End | Co-Fundador</p>
                 <p class="descricao">
@@ -143,7 +159,7 @@
 
             <!-- João Pedro -->
             <div class="card">
-                <img src="https://scontent.faqa6-1.fna.fbcdn.net/v/t39.30808-1/534801825_122098864646979579_6255007007425015698_n.jpg?stp=c0.477.828.828a_dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=111fe6&_nc_ohc=e68KTGsSwOcQ7kNvwHWl8WB&_nc_oc=Adnh0-34dAfECC86HnWvSoa7N3a3yEri5svSAkzNYU16_jYWRKGlKbpr4As8BF-ZTfs&_nc_zt=24&_nc_ht=scontent.faqa6-1.fna&_nc_gid=YQ6HytrimLlrFrhEpmiYhg&oh=00_AfW_tmp9brwtVOhso1op4yzQomZ-yieqC8PRm6GlA3Ue-g&oe=68A566B2" alt="Foto de João Pedro Ferreira" />
+                <img src="../imagens/sobrenos/fotojoao.jpg" alt="Foto de João Pedro Ferreira" />
                 <h2>João Pedro Ferreira</h2>
                 <p class="profissao">Desenvolvedor Front-End | Cofundador</p>
                 <p class="descricao">
@@ -166,7 +182,7 @@
 
             <!-- Rebeca -->
             <div class="card">
-                <img src="https://scontent.faqa6-1.fna.fbcdn.net/v/t39.30808-1/532898456_122098868396979579_626932439590508360_n.jpg?stp=c0.160.960.960a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=111fe6&_nc_ohc=rSZXExe6J2oQ7kNvwHicKBH&_nc_oc=Adm8_c52ZdT0oIHOtyNT2CNCV-zFWLVp0amZEtsAHPWFL14W3s-5E6mqV_bbZyuTlws&_nc_zt=24&_nc_ht=scontent.faqa6-1.fna&_nc_gid=NKetAPcG9Dd-Sc5rBxlyHw&oh=00_AfVNtIBEb-8j5wuDWmEcY-ktOv68DjY-srtVhXXZtyDTTw&oe=68A57253" alt="Foto de Rebeca Scutare" />
+                <img src="../imagens/sobrenos/fotorebeca.jpg"  alt="Foto de Rebeca Scutare" />
                 <h2>Rebeca Scutare</h2>
                 <p class="profissao">Estudante de Desenvolvimento de Software</p>
                 <p class="descricao">
@@ -209,5 +225,9 @@
     </div>
     <p class="copyright">&copy; Pesque & Fale 2025 - Todos os direitos reservados.</p>
   </footer>
+  </div>
+  <script src="../Javascript/script.js"></script>
+  <script src="../Javascript/menu.js"></script>
+    <script src="../Javascript/notificacao.js" defer></script>
 </body>
 </html>

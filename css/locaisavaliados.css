@@ -8,13 +8,12 @@ h1 {
   color: #062A6C;
   text-align: center;
   padding: 30px 0;
-  font-size: 32px;
 }
 
 .categoria {
   margin: 40px auto;
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .categoria-titulo {
@@ -28,13 +27,13 @@ h1 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 20px;
 }
 
 .card {
   background-color: white;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   overflow: hidden;
   display: flex;
@@ -53,7 +52,7 @@ h1 {
 }
 
 .card-content {
-  padding: 16px;
+  padding: 14px;
 }
 
 .card-content h3 {
@@ -78,19 +77,36 @@ h1 {
   }
 }
 
-/* ======== DARK MODE ========= */
 
-body.dark-mode h1,
-body.dark-mode .categoria-titulo {
-  color: #062A6C;
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px; /* Mais compacto para telas muito pequenas */
+    padding: 20px 0;
+  }
+  
+  .categoria {
+    margin: 20px auto;
+  }
+  
+  .categoria-titulo {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  
+  .card-content {
+    padding: 12px;
+  }
+  
+  .card-content h3 {
+    font-size: 16px;
+  }
+  
+  .stars {
+    font-size: 14px;
+  }
+  
+  .card-content p {
+    font-size: 13px;
+  }
 }
 
-body.dark-mode .card {
-  background-color: #161b22;
-  color: #f0f0f0;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode .stars {
-  color: #ffd700;
-}

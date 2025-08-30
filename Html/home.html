@@ -1,188 +1,468 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/home.css">
-  <link rel="stylesheet" href="../css/contador.css">
-  <link rel="stylesheet" href="../css/sidebar.css">
-</head>
-<body>
-  <!-- Cabeçalho -->
-  <header>
-    <h2 class="logo"><img src="../imagens/logo/logo.png" alt="Nome do Site"></h2>
-    <nav class="navigation">
-      <a href="home.html" data-page="home" data-page-title="página inicial" class="active">
-        <span class="material-symbols-outlined">home</span>
-         Página Inicial
-      </a>
-      <a href="pesquisa.html" data-page="search" data-page-title="pesquisa">
-        <span class="material-symbols-outlined">search</span>
-        Pesquisa
-      </a>
-      <a href="locaisavaliados.html" data-page="location" data-page-title="melhores locais">
-        <span class="material-symbols-outlined">location_on</span>
-        Melhores locais
-      </a>
-        <a href="notificacao.html" data-page="notifications" data-page-title="Notificações">
-            <span class="material-symbols-outlined">notifications</span>
-            Notificações
-            <span class="badge" id="contador">0</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pesque & Fale</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navegação Lateral -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="../imagens/logo/logo.jpg"
+          alt="Pesque & Fale"
+          class="logo"
+          width="100"
+        />
+        <h2 class="site-title"></h2>
+      </div>
+
+      <div class="nav-menu">
+        <a href="home.html" class="nav-item active">
+          <span class="material-symbols-outlined">home</span>
+          <span class="nav-text">Página Inicial</span>
         </a>
-      <a href="perfil.html" data-page="profile" data-page-title="perfil">
-        <span class="material-symbols-outlined">person</span>
-        Perfil
-      </a>
-       <a href="sobrenos.html" data-page="about" data-page-title="sobre-nos>
-        <span class="material-symbols-outlined">groups</span>
-        Equipe
-      </a>
-      <div class="theme-toggle">
-        <button id="theme-btn" class="theme-btn">
+        <a href="pesquisa.html" class="nav-item">
+          <span class="material-symbols-outlined">search</span>
+          <span class="nav-text">Pesquisa</span>
+        </a>
+        <a href="locaisavaliados.html" class="nav-item">
+          <span class="material-symbols-outlined">location_on</span>
+          <span class="nav-text">Melhores Locais</span>
+        </a>
+        <a href="notificacao.html" class="nav-item">
+          <span class="material-symbols-outlined">
+            notifications
+            <span class="badge" id="contador">3</span>
+          </span>
+          <span class="nav-text">Notificações</span>
+        </a>
+        <a href="sobrenos.html" class="nav-item">
+          <span class="material-symbols-outlined">school</span>
+          <span class="nav-text">Sobre nós</span>
+        </a>
+        <a href="perfil.html" class="nav-item">
+          <span class="material-symbols-outlined">person</span>
+          <span class="nav-text">Perfil</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="theme-toggle">
+          <button id="theme-btn" class="theme-btn">
             <span class="material-symbols-outlined">dark_mode</span>
-        </button>
-    </div>
+            <span class="nav-text">Modo Escuro</span>
+          </button>
+        </div>
+      </div>
     </nav>
 
-    <a href="login.html" class="login-btn"> <span class="material-symbols-outlined">login</span>Entra/Cadastro</a>
-  </header>
+    <div class="column">
+      <!-- Conteúdo Principal -->
+      <main class="main-content">
+        <!-- Header do Conteúdo -->
+        <header class="content-header-home">
+          <h1>Bem-vindo ao Pesque & Fale</h1>
+          <p>Compartilhe suas experiências de pesca e descubra novos locais</p>
+        </header>
 
-  <!-- Botão Nova Publicação -->
-  <section class="new-post">
-    <div class="btn-container">
-    <div class="btn-new-post">
-      <img src="https://s2.glbimg.com/YgAhqyyC53AAnulnR74rTCBRago=/s.glbimg.com/jo/g1/f/original/2016/03/29/lula_em_noronha_pescaria_4.jpg" alt="Foto de perfil" class="profile-img">
-      <input type="text" placeholder="O que você deseja publicar?" readonly onclick="window.location.href='formulario_publicacao.html'">
-    </div>
-    </div>
-  </section>
+        <!-- Botão Nova Publicação -->
+        <section class="new-post-section">
+          <div class="btn-new-post">
+            <img
+              src="https://s2.glbimg.com/YgAhqyyC53AAnulnR74rTCBRago=/s.glbimg.com/jo/g1/f/original/2016/03/29/lula_em_noronha_pescaria_4.jpg"
+              alt="Foto de perfil"
+              class="profile-img"
+            />
+            <input
+              type="text"
+              placeholder="O que você deseja publicar sobre pesca hoje?"
+              readonly
+              onclick="window.location.href='formulario_publicacao.html'"
+            />
+            <button class="post-btn">
+              <span class="material-symbols-outlined">add_photo_alternate</span>
+            </button>
+          </div>
+        </section>
 
-  <!-- Layout Principal: Feed à esquerda, Eventos à direita -->
-  <main class="container main-layout">
-    <!-- Feed -->
-    <section class="feed">
-      <div class="post-card" onclick="redirectToPostDetails(1)">
-        <div class="post-image">
-          <img src="https://bing.com/th/id/BCO.189627c4-fc58-4541-abd8-a32efc65bfe1.png" alt="Imagem da publicação">
-        </div>
-        <div class="post-content">
-          <h3 class="post-author">@Henrique <span class="post-date">• 06/05/2025</span></h3>
-          <p class="post-location">Matão - SP • Lago azul</p>
-          <p class="post-text">Meu amigo pescou hoje!</p>
-        </div>
-        <div class="post-actions">
-          <button><span class="material-symbols-outlined">thumb_up</span> Curtir</button>
-          <button><span class="material-symbols-outlined">comment</span> Comentar</button>
-          <button><span class="material-symbols-outlined">share</span> Compartilhar</button>
-        </div>
-      
-        <!-- Comentários -->
-        <div class="post-comments">
-          <div class="comment"><strong>@Lucas:</strong> Não me chamou?</div>
-          <div class="comment"><strong>@Danilo:</strong> Foi legal a experiência!</div>
-        </div>
-          <!-- Falsa Caixa de Comentário -->
-  <div class="fake-comment-box">
-    <input type="text" class="fake-comment-input" placeholder="Escreva um comentário...">
-    <button class="fake-comment-submit">Comentar</button>
-  </div>
-      </div>
-      <!-- Publicação 2 -->
-  <div class="post-card" onclick="redirectToPostDetails(2)">
-    <div class="post-image">
-      <img src="https://bing.com/th/id/BCO.f0d762e5-1976-4015-8880-6d491b333a8d.png" alt="Outra publicação">
-    </div>
-    <div class="post-content">
-      <h3 class="post-author">@Lucas <span class="post-date">• 06/05/2025</span></h3>
-      <p class="post-location">Matão - SP • Recanto do Pescador</p>
-      <p class="post-text">Olha o peixe que o pai pego!</p>
-    </div>
-    <div class="post-actions">
-      <button><span class="material-symbols-outlined">thumb_up</span> Curtir</button>
-      <button><span class="material-symbols-outlined">comment</span> Comentar</button>
-      <button><span class="material-symbols-outlined">share</span> Compartilhar</button>
-    </div>
-    <div class="post-comments">
-      <div class="comment"><strong>@Henrique:</strong> Que peixe amigo!</div>
-    </div>
-    <!-- Falsa Caixa de Comentário -->
-    <div class="fake-comment-box">
-      <input type="text" class="fake-comment-input" placeholder="Escreva um comentário...">
-      <button class="fake-comment-submit">Comentar</button>
-    </div>
-  </div>
-</section>
+        <!-- Layout Principal: Feed e Eventos -->
+        <div class="content-layout">
+          <!-- Feed de Publicações -->
+          <section class="feed">
+            <div class="post-card" onclick="redirectToPostDetails(1)">
+              <div class="post-header">
+                <img
+                  src="https://letsgosea.com/wp-content/uploads/2020/01/Pesca-Costeira-2.jpg"
+                  alt="Henrique"
+                  class="post-author-img"
+                />
+                <div class="post-author-info">
+                  <h3 class="post-author">@Henrique</h3>
+                  <p class="post-meta">Matão - SP • Lago Azul • 06/05/2025</p>
+                </div>
+                <button class="post-menu">
+                  <span class="material-symbols-outlined">more_vert</span>
+                </button>
+              </div>
 
-    <!-- Eventos -->
-    <div class="events-wrapper">
-    <aside class="events">
-      <div class="events-box">
-        <h2>Eventos de Pesca</h2>
+              <div class="post-content">
+                <p class="post-text">
+                  Meu amigo pescou hoje! Que experiência incrível no Lago Azul.
+                  O tucunaré estava atacando muito bem hoje de manhã. 🎣
+                </p>
+              </div>
 
-        <div class="event-item">
-          <div class="event-image">
-            <img src="../imagens/eventos/evento1.jpg" alt="Imagem do evento">
+              <div class="post-image">
+                <img
+                  src="https://letsgosea.com/wp-content/uploads/2020/01/Pesca-Costeira-2.jpg"
+                  alt="Pesca no Lago Azul"
+                />
+              </div>
+
+              <div class="post-stats">
+                <span>24 curtidas</span>
+                <span>8 comentários</span>
+              </div>
+
+              <div class="post-actions">
+                <button class="action-btn">
+                  <span class="material-symbols-outlined">thumb_up</span>
+                  Curtir
+                </button>
+                <button class="action-btn">
+                  <span class="material-symbols-outlined">comment</span>
+                  Comentar
+                </button>
+                <button class="action-btn">
+                  <span class="material-symbols-outlined">share</span>
+                  Compartilhar
+                </button>
+              </div>
+
+              <div class="post-comments">
+                <div class="comment">
+                  <img
+                    src="https://via.placeholder.com/32"
+                    alt="Lucas"
+                    class="comment-avatar"
+                  />
+                  <div class="comment-content">
+                    <strong>@Lucas</strong>
+                    <p>Não me chamou? Da próxima vez me avisa!</p>
+                  </div>
+                </div>
+                <div class="comment">
+                  <img
+                    src="https://via.placeholder.com/32"
+                    alt="Danilo"
+                    class="comment-avatar"
+                  />
+                  <div class="comment-content">
+                    <strong>@Danilo</strong>
+                    <p>Foi legal a experiência! Quero ir na próxima também.</p>
+                  </div>
+                </div>
+
+                <div class="comment-input">
+                  <img
+                    src="https://s2.glbimg.com/YgAhqyyC53AAnulnR74rTCBRago=/s.glbimg.com/jo/g1/f/original/2016/03/29/lula_em_noronha_pescaria_4.jpg"
+                    alt="Você"
+                    class="comment-avatar"
+                  />
+                  <input type="text" placeholder="Escreva um comentário..." />
+                  <button class="comment-btn">
+                    <span class="material-symbols-outlined">send</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Publicação 2 -->
+            <div class="post-card" onclick="redirectToPostDetails(2)">
+              <div class="post-header">
+                <img
+                  src="https://via.placeholder.com/40"
+                  alt="Lucas"
+                  class="post-author-img"
+                />
+                <div class="post-author-info">
+                  <h3 class="post-author">@Lucas</h3>
+                  <p class="post-meta">
+                    Matão - SP • Recanto do Pescador • 06/05/2025
+                  </p>
+                </div>
+                <button class="post-menu">
+                  <span class="material-symbols-outlined">more_vert</span>
+                </button>
+              </div>
+
+              <div class="post-content">
+                <p class="post-text">
+                  Olha o peixe que o pai pegou! Dourado de 3kg no Recanto do
+                  Pescador. A isca artificial funcionou perfeitamente! 🐟
+                </p>
+              </div>
+
+              <div class="post-image">
+                <img
+                  src="https://bing.com/th/id/BCO.f0d762e5-1976-4015-8880-6d491b333a8d.png"
+                  alt="Dourado pescado"
+                />
+              </div>
+
+              <div class="post-stats">
+                <span>18 curtidas</span>
+                <span>5 comentários</span>
+              </div>
+
+              <div class="post-actions">
+                <button class="action-btn">
+                  <span class="material-symbols-outlined">thumb_up</span>
+                  Curtir
+                </button>
+                <button class="action-btn">
+                  <span class="material-symbols-outlined">comment</span>
+                  Comentar
+                </button>
+                <button class="action-btn">
+                  <span class="material-symbols-outlined">share</span>
+                  Compartilhar
+                </button>
+              </div>
+
+              <div class="post-comments">
+                <div class="comment">
+                  <img
+                    src="https://s2.glbimg.com/YgAhqyyC53AAnulnR74rTCBRago=/s.glbimg.com/jo/g1/f/original/2016/03/29/lula_em_noronha_pescaria_4.jpg"
+                    alt="Henrique"
+                    class="comment-avatar"
+                  />
+                  <div class="comment-content">
+                    <strong>@Henrique</strong>
+                    <p>Que peixe amigo! Parabéns pela pescaria!</p>
+                  </div>
+                </div>
+
+                <div class="comment-input">
+                  <img
+                    src="https://s2.glbimg.com/YgAhqyyC53AAnulnR74rTCBRago=/s.glbimg.com/jo/g1/f/original/2016/03/29/lula_em_noronha_pescaria_4.jpg"
+                    alt="Você"
+                    class="comment-avatar"
+                  />
+                  <input type="text" placeholder="Escreva um comentário..." />
+                  <button class="comment-btn">
+                    <span class="material-symbols-outlined">send</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card de Dicas -->
+            <div class="tips-card">
+              <div class="tips-header">
+                <span class="material-symbols-outlined">lightbulb</span>
+                <h3>Dica do Dia</h3>
+              </div>
+              <p>
+                Para pescar tucunaré, use iscas artificiais como jigs e
+                spinners. O melhor horário é no início da manhã ou final da
+                tarde.
+              </p>
+            </div>
+          </section>
+
+          <!-- Sidebar Direita - Eventos e Informações -->
+          <aside class="right-sidebar">
+            <!-- Eventos -->
+            <div class="widget events-widget">
+              <h3 class="widget-title">
+                <span class="material-symbols-outlined">event</span>
+                Próximos Eventos
+              </h3>
+
+              <div class="event-item">
+                <div class="event-image">
+                  <img src="../imagens/evento1.jpg" alt="Torneio de Tucunaré" />
+                </div>
+                <div class="event-info">
+                  <h4 class="event-title">Torneio de Tucunaré</h4>
+                  <p class="event-date">10/05/2025</p>
+                  <p class="event-location">Recanto do Pescador</p>
+                  <p class="event-desc">
+                    Participe do maior torneio do estado!
+                  </p>
+                  <button class="event-btn">Participar</button>
+                </div>
+              </div>
+
+              <div class="event-item">
+                <div class="event-image">
+                  <img src="../imagens/evento2.jpg" alt="Pesca de Praia" />
+                </div>
+                <div class="event-info">
+                  <h4 class="event-title">Pesca de Praia</h4>
+                  <p class="event-date">20/05/2025</p>
+                  <p class="event-location">Pesqueiro Rota do Peixe</p>
+                  <p class="event-desc">Competição de pesca na orla.</p>
+                  <button class="event-btn">Participar</button>
+                </div>
+              </div>
+
+              <div class="event-item">
+                <div class="event-image">
+                  <img
+                    src="../imagens/evento3.jpg"
+                    alt="Campeonato de Caiaque"
+                  />
+                </div>
+                <div class="event-info">
+                  <h4 class="event-title">Campeonato de Caiaque</h4>
+                  <p class="event-date">05/06/2025</p>
+                  <p class="event-location">Pesqueiro 311</p>
+                  <p class="event-desc">Pesca esportiva de caiaque.</p>
+                  <button class="event-btn">Participar</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Locais Populares -->
+            <div class="widget popular-places">
+              <h3 class="widget-title">
+                <span class="material-symbols-outlined">trending_up</span>
+                Locais em Alta
+              </h3>
+
+              <div class="place-item">
+                <img src="https://via.placeholder.com/60x60" alt="Lago Azul" />
+                <div class="place-info">
+                  <h4>Lago Azul</h4>
+                  <p>Matão - SP</p>
+                  <div class="place-rating">
+                    <span>⭐ 4.8</span>
+                    <span>124 avaliações</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="place-item">
+                <img
+                  src="https://via.placeholder.com/60x60"
+                  alt="Recanto do Pescador"
+                />
+                <div class="place-info">
+                  <h4>Recanto do Pescador</h4>
+                  <p>Matão - SP</p>
+                  <div class="place-rating">
+                    <span>⭐ 4.6</span>
+                    <span>89 avaliações</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="place-item">
+                <img
+                  src="https://via.placeholder.com/60x60"
+                  alt="Pesqueiro 311"
+                />
+                <div class="place-info">
+                  <h4>Pesqueiro 311</h4>
+                  <p>Araraquara - SP</p>
+                  <div class="place-rating">
+                    <span>⭐ 4.7</span>
+                    <span>156 avaliações</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Clima -->
+            <div class="widget weather-widget">
+              <h3 class="widget-title">
+                <span class="material-symbols-outlined">wb_sunny</span>
+                Condições para Pesca
+              </h3>
+
+              <div class="weather-info">
+                <div class="weather-main">
+                  <span class="weather-icon">☀️</span>
+                  <div>
+                    <h4>28°C</h4>
+                    <p>Ensolarado</p>
+                  </div>
+                </div>
+
+                <div class="weather-details">
+                  <div class="weather-item">
+                    <span class="material-symbols-outlined">air</span>
+                    <span>Vento: 12 km/h</span>
+                  </div>
+                  <div class="weather-item">
+                    <span class="material-symbols-outlined">water_drop</span>
+                    <span>Umidade: 65%</span>
+                  </div>
+                  <div class="weather-item">
+                    <span class="material-symbols-outlined">visibility</span>
+                    <span>Visibilidade: Boa</span>
+                  </div>
+                </div>
+
+                <div class="fishing-conditions">
+                  <span class="condition-good"
+                    >🎣 Condições Excelentes para Pesca</span
+                  >
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <!-- Rodapé -->
+      <footer>
+        <div class="footer-container">
+          <div>
+            <h3>Sobre Nós</h3>
+            <p>
+              Grupo de estudantes dedicados ao desenvolvimento de iniciativas
+              voltadas à melhoria do trabalho socioeconômico em Matão-SP e
+              região.
+            </p>
           </div>
           <div>
-            <p class="event-title">Torneio de Tucunaré</p>
-            <p class="event-date">10/05/2025</p>
-            <p class="event-date">• Recanto do Pescador</p>
-            <p class="event-desc">Participe do maior torneio do estado!</p>
-          </div>
-        </div>
-        <hr>
-        <div class="event-item">
-          <div class="event-image">
-            <img src="../imagens/eventos/evento2.jpg" alt="Imagem do evento">
+            <h3>Links Úteis</h3>
+            <a href="pesquisa.html">Pesquisa de Locais</a>
+            <a href="locaisavaliados.html">Melhores locais</a>
+            <a href="notificacao.html">Notificações</a>
+            <a href="sobrenos.html">Sobre nós</a>
+            <a href="perfil.html">Perfil</a>
           </div>
           <div>
-            <p class="event-title">Pesca de Praia</p>
-            <p class="event-date">20/05/2025</p>
-            <p class="event-date">• Pesqueiro Rota do Peixe</p>
-            <p class="event-desc">Competição de pesca na orla.</p>
+            <h3>Contato</h3>
+            <p>Email: pesquefale@gmail.com</p>
+            <span class="material-symbols-outlined"></span>
           </div>
         </div>
-        <hr>
-        <div class="event-item">
-          <div class="event-image">
-            <img src="../imagens/eventos/evento3.jpg" alt="Imagem do evento">
-          </div>
-          <div>
-            <p class="event-title">Campeonato de Caiaque</p>
-            <p class="event-date">05/06/2025</p>
-            <p class="event-date">• Pesqueiro 311</p>
-            <p class="event-desc">Pesca esportiva de caiaque.</p>
-          </div>
-        </div>
-      </div>
-    </aside>
+        <p class="copyright">
+          &copy; Pesque & Fale 2025 - Todos os direitos reservados.
+        </p>
+      </footer>
     </div>
-  </main>
-
-  <!-- Rodapé -->
-<footer>
-    <div class="footer-container">
-      <div>
-        <h3>Sobre Nós</h3>
-        <p>Grupo de estudantes dedicados ao desenvolvimento de iniciativas voltadas à melhoria do trabalho socioeconômico em Matão-SP e região.</p>
-      </div>
-      <div>
-        <h3>Links Úteis</h3>
-        <a href="pesquisa.html">Pesquisa de Locais</a>
-        <a href="locaisavaliados.html">Melhores locais</a>
-        <a href="notificacao.html">Notificações</a>
-        <a href="perfil.html">Perfil</a>
-      </div>
-      <div>
-        <h3>Contato</h3>
-        <p>Email: pesquefale@gmail.com</p>
-      </div>
-    </div>
-    <p class="copyright">&copy; Pesque & Fale 2025 - Todos os direitos reservados.</p>
-  </footer>
-  <script src="../Javascript/script.js"></script>
-</body>
+    <script src="../Javascript/menu.js"></script>
+    <script src="../Javascript/script.js"></script>
+    <script src="../Javascript/notificacao.js" defer></script>
+  </body>
 </html>

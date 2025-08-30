@@ -12,6 +12,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 70px;
 }
 
 .foto-perfil {
@@ -189,6 +190,7 @@ body {
 
 /* Responsivo */
 @media (max-width: 700px) {
+
   .publicacao-horizontal {
     flex-direction: column;
     align-items: center;
@@ -344,55 +346,5 @@ h1 {
   color: #062A6C;
 }
 
-/* Dark Mode */
-body.dark-mode .nome-usuario,
-body.dark-mode .comentario,
-body.dark-mode .btn-interacao {
-    color: 062A6C !important;
-}
 
-body.dark-mode .data-publicacao {
-    color: 062A6C !important;
-}
-
-body.dark-mode .interacoes {
-    border-color:  #062A6C !important;
-}
-
-/* Dark Mode para Perfil */
-body.dark-mode .perfil {
-  background-color: #000000;
-  color:  #ffffff;
-}
-
-body.dark-mode .publicacao-horizontal {
-  background-color: #ffffff;
-  box-shadow: 0 3px 10px  #062A6C;
-}
-
-body.dark-mode .username {
-  color: #ffffff;
-}
-
-body.dark-mode .comentario {
-  color: #000000 !important; /* Cor clara para o texto (cinza claro) */
-}
-
-
-body.dark-mode .stat-box {
-  background: #ffffff;
-  color: #ffffff;
-}
-
-body.dark-mode .data-publicacao {
-  color: #a3a3a3;
-}
     
-    /* Rodapé fixado na parte inferior quando há pouco conteúdo */
-    .site-footer {
-      background-color: #000000;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      width: 100%;
-    }

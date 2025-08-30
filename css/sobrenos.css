@@ -8,12 +8,12 @@ body {
 .sobre-nos {
     padding: 50px 20px;
     text-align: center;
+    
 }
 
 .sobre-nos h1 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #222;
 }
 
 .container {
@@ -133,6 +133,41 @@ body {
             .container {
                 grid-template-columns: 1fr;
             }
+
+            .sobre-nos {
+                margin-top: 70px;
+            }
         }
 
 
+/* Tema escuro */
+body.dark-mode {
+    color: #fff;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+
+body.dark-mode .descricao {
+    color: #ffffff;
+}
+
+body.dark-mode .card h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .location-card {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+body.dark-mode .contribuicao-label {
+    color: #ffffff;
+}
+
+body.dark-mode .social i {
+    color: #ffffff;
+}
