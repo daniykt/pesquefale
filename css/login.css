@@ -49,7 +49,6 @@ body.login-page {
 
 .auth-area {
     width: 50%;
-    min-width: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +60,6 @@ body.login-page {
 /* ÁREA DE AUTENTICAÇÃO (direita) */
 .auth-area {
     width: 48%;
-    min-width: 340px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,6 +295,10 @@ body.login-page {
     margin: 12px;
   }
 
+  .wrapper .form-box {
+    width: 100%;
+  } 
+
   /* imagem vira banner no topo */
   .side-image {
     width: 100%;
@@ -324,11 +326,9 @@ body.login-page {
   /* ajustes de tamanhos e espaçamentos para mobile */
   .form-box .logo img { height: 56px; }
   .form-box h2 { font-size: 1.4rem; margin-top: 6px; }
-  .input-box { height: 44px; margin: 18px 0 12px; }
   .input-box label { font-size: 0.95rem; }
   .input-box input { font-size: 0.9rem; padding-right: 42px; }
   .btn { height: 44px; font-size: 0.98rem; border-radius: 8px; }
   .login-register { margin: 12px 0 8px; font-size: 0.9rem; }
 
 }
-
