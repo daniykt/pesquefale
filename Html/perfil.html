@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../css/contador.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+  <header>
+    <h2 class="logo"><img src="../imagens/logo.png" alt="Nome do Site"></h2>
+    <nav class="navigation">
+        <a href="home.html">
+            <span class="material-symbols-outlined">home</span>
+            Página Inicial
+        </a>
+        <a href="pesquisa.html">
+            <span class="material-symbols-outlined">search</span>
+            Pesquisa
+        </a>
+        <a href="locaisavaliados.html">
+          <span class="material-symbols-outlined">location_on</span>
+          Melhores locais
+        </a>
+        <a href="notificacao.html">
+            <span class="material-symbols-outlined">notifications</span>
+            Notificações
+            <span class="badge" id="contador">0</span>
+        </a>
+        <a href="perfil.html" class="active">
+            <span class="material-symbols-outlined">person</span>
+            Perfil
+        </a>
+        <div class="theme-toggle">
+          <button id="theme-btn" class="theme-btn">
+              <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+      </div>
+    </nav>
+    <a href="login.html" class="login-btn">
+        <span class="material-symbols-outlined">login</span>
+        Entra/Cadastro
+    </a>
+</header>
+  <div class="container">
+  <div class="perfil">
+    <img src="https://preview.redd.it/on9y92ssh1mb1.jpg?auto=webp&s=a881b5e709139d5b233b52418169faab7d3c355b" alt="Foto de Danilo" class="foto-perfil">
+    
+    <div class="profile-stats">
+        <div class="stat-box">
+          <span class="number">10</span>
+          <span class="label">Publicações</span>
+        </div>
+        <div class="stat-box">
+          <span class="number">200</span>
+          <span class="label">Seguidores</span>
+        </div>
+        <div class="stat-box">
+          <span class="number">180</span>
+          <span class="label">Seguindo</span>
+        </div>
+      </div>
+      
+    
+    <div class="username-container">
+      <h2 class="username">@danizsp</h2>
+  </div>
+
+    <div class="bio">
+        <p>Quem não gosta de pesca?</p>
+    </div>
+    
+    <div class="botoes-acao">
+      <!-- <button class="btn-seguir" onclick="toggleSeguir()">
+        <span class="material-symbols-outlined">person_add</span>
+        <span class="btn-text">Seguir</span>
+    </button> -->
+        <button class="btn-publicar" onclick="publicar()">
+          <span class="material-symbols-outlined">add_box</span>
+          <span class="btn-text">Publicar</span>
+      </button>
+    </div>
+
+    <div class="publicacao-horizontal">
+      <img src="https://i.redd.it/ogf828rm6noe1.jpeg" alt="Publicação 1" class="foto-horizontal">
+      <div class="info-direita">
+        <div class="data-publicacao">Postado em 12/04/2025 às 18:30</div>
+        <div class="comentario">Que dia incrível de pesca!</div>
+        <div class="local">São Paulo, Brasil</div>
+        <div class="avaliacao">★★★★★</div>
+    
+        <div class="interacoes">
+          <button class="btn-interacao">
+            <span class="material-symbols-outlined">thumb_up</span> 42
+          </button>
+          <button class="btn-interacao">
+            <span class="material-symbols-outlined">comment</span> 8
+          </button>
+          <button class="btn-interacao">
+            <span class="material-symbols-outlined">share</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="publicacao-horizontal">
+      <img src="https://pm1.aminoapps.com/7454/c05eba73774e2863e36f4ee18b17797ca0057556r1-1280-720v2_hq.jpg" alt="Publicação 2" class="foto-horizontal">
+      <div class="info-direita">
+        <div class="data-publicacao">Postado em 12/04/2025 às 14:30</div>
+        <div class="comentario">Lugar top pra pescar com os amigos!</div>
+        <div class="local">Rio de Janeiro, Brasil</div>
+        <div class="avaliacao">★★★★☆</div>
+    
+        <div class="interacoes">
+          <button class="btn-interacao">
+            <span class="material-symbols-outlined">thumb_up</span> 58
+          </button>
+          <button class="btn-interacao">
+            <span class="material-symbols-outlined">comment</span> 11
+          </button>
+          <button class="btn-interacao">
+            <span class="material-symbols-outlined">share</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+    <script src="../Javascript/perfil.js"></script>
+    <script src="../Javascript/script.js"></script>
+    
+    <!-- Rodapé -->
+    <footer class="site-footer">
+      <p>© 2025 Pesque & Fale – Todos os direitos reservados</p>
+    </footer>
+  </body>
+  </html>
+  
